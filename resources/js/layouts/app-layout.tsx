@@ -1,0 +1,16 @@
+import AppLayoutTemplate from '@/layouts/app/app-sidebar-layout';
+import { type BreadcrumbItem } from '@/types';
+import { type ReactNode } from 'react';
+import { Toaster } from 'react-hot-toast';
+
+interface AppLayoutProps {
+    children: ReactNode;
+    breadcrumbs?: BreadcrumbItem[];
+}
+
+export default ({ children, breadcrumbs, ...props }: AppLayoutProps) => (
+    <AppLayoutTemplate breadcrumbs={breadcrumbs} {...props}>
+        {children}
+        <Toaster position="top-right" toastOptions={{ duration: 3000 }} />
+    </AppLayoutTemplate>
+);
