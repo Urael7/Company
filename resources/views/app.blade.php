@@ -32,8 +32,8 @@
 
         <title inertia>Ethio Innovation Software Development</title>
 
-        <link rel="icon" href="/ethioinnovation.png" type="image/png">
-        <link rel="apple-touch-icon" href="/ethioinnovation.png">
+        <link rel="icon" href="/eilogo.png" type="image/png">
+        <link rel="apple-touch-icon" href="/eilogo.png">
 
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600" rel="stylesheet" />

@@ -8,7 +8,7 @@ import events from '@/routes/events';
 
 import { type NavItem } from '@/types';
 import { Link } from '@inertiajs/react';
-import { BookOpen, Folder, LayoutGrid } from 'lucide-react';
+import { LayoutGrid, Shield, Users, FileText, Calendar, Inbox, Megaphone, TrendingUp } from 'lucide-react';
 import AppLogo from './app-logo';
 
 const mainNavItems: NavItem[] = [
@@ -20,42 +20,42 @@ const mainNavItems: NavItem[] = [
     {
         title: 'Roles',
         href: 'roles',
-        icon: LayoutGrid,
+        icon: Shield,
         permission: 'View_user_list',
     },
      {
         title: 'Users',
         href: usersRoute().url,
-        icon: LayoutGrid,
+        icon: Users,
         permission: 'View_user_list',
     },
     {
         title: 'Auditlogs',
         href: 'auditlogs',
-        icon: LayoutGrid,
+        icon: FileText,
         permission: 'View_auditlog_list',
     },
     {
         title: 'Events',
         href: events.index().url,
-        icon: LayoutGrid,
+        icon: Calendar,
         permission: 'View_event_list',
     },
     {
         title: 'Requests',
         href: 'requests',
-        icon: LayoutGrid,
+        icon: Inbox,
     },
     {
         title: 'Announcements',
         href: 'announcements',
-        icon: LayoutGrid,
+        icon: Megaphone,
         permission: 'View_Announcement_list',
     },
     {
-        title: 'performance',
+        title: 'Performance',
         href: 'performance',
-        icon: LayoutGrid,
+        icon: TrendingUp,
     },
     
     
@@ -63,16 +63,7 @@ const mainNavItems: NavItem[] = [
 ];
 
 const footerNavItems: NavItem[] = [
-    // {
-    //     title: 'Repository',
-    //     href: 'https://github.com/laravel/react-starter-kit',
-    //     icon: Folder,
-    // },
-    // {
-    //     title: 'Documentation',
-    //     href: 'https://laravel.com/docs/starter-kits#react',
-    //     icon: BookOpen,
-    // },
+   
 ];
 
 export function AppSidebar() {

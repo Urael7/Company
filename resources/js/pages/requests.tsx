@@ -245,6 +245,17 @@ export default function Requests({ pendingRequests = [], allRequests = [], userR
                                 <span className="text-gray-400">No attachment</span>
                               )}
                             </td>
+                            <td className="py-4 px-4 align-top">
+                              <input
+                                type="text"
+                                value={requestComments[request.id] ?? ''}
+                                onChange={(e) =>
+                                  setRequestComments((prev) => ({ ...prev, [request.id]: e.target.value }))
+                                }
+                                placeholder="Add admin comment"
+                                className="w-full border rounded-lg p-2 text-sm focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                              />
+                            </td>
                             <td className="py-4 px-4">
                               <div className="flex gap-2">
                                 <Button

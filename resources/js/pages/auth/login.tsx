@@ -19,7 +19,9 @@ interface LoginProps {
 export default function Login({ status, canResetPassword }: LoginProps) {
     return (
         <AuthLayout title="Log in to your account" description="Enter your email and password below to log in">
-            <Head title="Log in" />
+            <Head title="Log in">
+                <link rel="icon" href="/eilogo.png" type="image/png" />
+            </Head>
 
             <Form {...store.form()} resetOnSuccess={['password']} className="flex flex-col gap-6">
                 {({ processing, errors }) => (
