@@ -21,21 +21,25 @@ const mainNavItems: NavItem[] = [
         title: 'Roles',
         href: 'roles',
         icon: LayoutGrid,
+        permission: 'View_user_list',
     },
      {
         title: 'Users',
         href: usersRoute().url,
         icon: LayoutGrid,
+        permission: 'View_user_list',
     },
     {
         title: 'Auditlogs',
         href: 'auditlogs',
         icon: LayoutGrid,
+        permission: 'View_auditlog_list',
     },
     {
         title: 'Events',
         href: events.index().url,
         icon: LayoutGrid,
+        permission: 'View_event_list',
     },
     {
         title: 'Requests',
@@ -46,6 +50,7 @@ const mainNavItems: NavItem[] = [
         title: 'Announcements',
         href: 'announcements',
         icon: LayoutGrid,
+        permission: 'View_Announcement_list',
     },
     {
         title: 'performance',
@@ -77,7 +82,7 @@ export function AppSidebar() {
                 <SidebarMenu>
                     <SidebarMenuItem>
                         <SidebarMenuButton size="lg" asChild>
-                            <Link href={dashboard()} prefetch>
+                            <Link href={dashboard().url} prefetch>
                                 <AppLogo />
                             </Link>
                         </SidebarMenuButton>

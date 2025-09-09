@@ -10,6 +10,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\AuditlogController;
 use App\Http\Controllers\AnnouncementController;
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\LeaveRequestController;
 use App\Http\Controllers\PerformanceController;
 
@@ -18,9 +19,7 @@ Route::get('/', function () {
 })->name('home');
 
 Route::middleware(['auth', 'verified'])->group(function () {
-    Route::get('dashboard', function () {
-        return Inertia::render('dashboard');
-    })->name('dashboard');
+    Route::get('dashboard', DashboardController::class)->name('dashboard');
     Route::resource('users', UserController::class, [
         'names' => [
             'index' => 'users',
@@ -36,6 +35,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
     ['names' => [
         'index' => 'auditlogs.index',
     ]])->middleware('permission:View_auditlog_list');
+    Route::get('api/auditlogs', [AuditlogController::class, 'list'])->name('auditlogs.list')->middleware('permission:View_auditlog_list');
 
 
     Route::resource('events', EventController::class,

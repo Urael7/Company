@@ -209,9 +209,9 @@ export default function Performance({ reviews, users, stats, trends, can }: Prop
         <div className="flex items-center justify-between px-2 pt-2 mb-2">
           <div>
             <h2 className="text-xl font-bold">Performance Management</h2>
-            <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
+            {/* <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
               {can.view_all ? "Comprehensive performance tracking and analytics" : "Your performance reviews and metrics"}
-            </p>
+            </p> */}
           </div>
           {can.manage && (
             <Dialog open={open} onOpenChange={setOpen}>

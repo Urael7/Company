@@ -126,9 +126,9 @@ export default function Requests({ pendingRequests = [], allRequests = [], userR
         <div className="flex items-center justify-between px-2 pt-2 mb-2">
           <div>
             <h2 className="text-xl font-bold">{isAdmin ? "Request Management" : "Submit Request"}</h2>
-            <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
+            {/* <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
               {isAdmin ? "Review and manage employee requests" : "Submit your leave or service requests"}
-            </p>
+            </p> */}
           </div>
           <div />
         </div>
